@@ -17,6 +17,7 @@ jobs:
         - name: Second Workflow Step
           run: echo "This is second workflow"
     deploy-job:
+      needs: test-job
       runs-on: ubuntu-latest
       steps:
         - name: Get Code
