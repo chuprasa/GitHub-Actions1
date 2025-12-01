@@ -1,7 +1,7 @@
-name: TestProject
+name: Deploy Project
 on: [push, workflow_dispatch]
 jobs:
-    test-job:
+    test:
       runs-on: ubuntu-latest
       steps:
         - name: Get Code
@@ -16,8 +16,8 @@ jobs:
           run: npm test
         - name: Second Workflow Step
           run: echo "This is second workflow"
-    deploy-job:
-      needs: test-job
+    deploy:
+      needs: test
       runs-on: ubuntu-latest
       steps:
         - name: Get Code
