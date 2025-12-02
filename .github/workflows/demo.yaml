@@ -10,7 +10,7 @@ jobs:
       - name: Get Code
         uses: actions/checkout@v3
       - name: Install dependencies
-        run: npmci
+        run: npm-ci
       - name: Lint Code
         run: npm run lint
       - name: Run Tests
